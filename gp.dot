@@ -1,0 +1,51 @@
+digraph aboba { // 1(01(01)*(0+ɛ) + 10(10)*(1+ɛ)) (1001+0110)
+    rankdir=LR;
+    node [shape = circle];
+
+    q0 -> q1 [label="1"];
+
+    q1 -> q20 [label="ɛ"];
+    q1 -> q30 [label="ɛ"];
+
+    q20 -> q21 [label="0"];
+    q21 -> q22 [label="1"];
+    q22 -> q23 [label="ɛ"];
+    q23 -> q24 [label="0"];
+    q24 -> q25 [label="1"];
+    q25 -> q23 [label="ɛ"];
+    q25 -> q26 [label="ɛ"];
+    q22 -> q26 [label="ɛ"];
+    q26 -> q27 [label="0"];
+    q26 -> q27 [label="ɛ"];
+
+    
+    q30 -> q31 [label="1"];
+    q31 -> q32 [label="0"];
+    q32 -> q33 [label="ɛ"];
+    q33 -> q34 [label="1"];
+    q34 -> q35 [label="0"];
+    q35 -> q33 [label="ɛ"];
+    q35 -> q36 [label="ɛ"];
+    q32 -> q36 [label="ɛ"];
+    q36 -> q37 [label="1"];
+    q36 -> q37 [label="ɛ"];
+
+    q27 -> q11 [label="ɛ"];
+    q37 -> q11 [label="ɛ"];
+
+    q11 -> q112 [label="ɛ"];
+    q11 -> q113 [label="ɛ"];
+
+    q112 -> q114 [label="1"];
+    q114 -> q115 [label="0"];
+    q115 -> q116 [label="0"];
+    q116 -> q117 [label="1"];
+    
+    q113 -> q118 [label="0"];
+    q118 -> q119 [label="1"];
+    q119 -> q120 [label="1"];
+    q120 -> q121 [label="0"];
+
+    q117 -> q122 [label="ɛ"];
+    q121 -> q122 [label="ɛ"];
+}
